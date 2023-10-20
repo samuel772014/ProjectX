@@ -1,0 +1,57 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<link rel="stylesheet" href="~/css/MemberUse/login.css" />
+<!-- 註冊 -->
+<div class="container-loginandregister">
+
+	<div id="container2">
+
+	<form action="@Url.Action("Register", "Account")" method="post" class="login">
+
+		<div class="headerforregister">
+			<h1>註冊!</h1>
+			<p>開始揪團，一起探險!</p>
+		</div>
+
+		<input type="text" id="username2" name="account" placeholder="帳號" required>
+		<div class="tab"></div>
+		<input type="password" id="password2" name="password" placeholder="密碼" required>
+		<div class="tab"></div>
+		<input type="password" id="comfirm_password" name="comfirm_password" placeholder="確認密碼" required>
+		<span id="passwordMismatch" style="color: red; display: none;">輸入與新密碼不符合</span>
+
+		<div class="tab"></div>
+		<input type="text" id="fullname" name="nickname" placeholder="暱稱" required>
+		<div class="tab"></div>
+		<input type="email" id="emailabc" name="email" placeholder="電子信箱" required>
+		<div class="tab"></div>
+
+		<div class="button-container">
+			<button type="submit" class="button">註冊</button>
+		</div>
+		<div class="login-link">
+				<a style="display:inline-block ;text-decoration: none;" class="button" href="/Home/Login">註冊帳號</a>
+		</div>
+	</form>
+	</div>
+</div>
+
+<script>
+	window.addEventListener('DOMContentLoaded', function () {
+		var password = document.getElementById('password2');
+		var confirmPassword = document.getElementById('comfirm_password');
+		var passwordMismatchMessage = document.getElementById('passwordMismatch');
+
+		confirmPassword.addEventListener('input', function () {
+			if (password.value !== confirmPassword.value && confirmPassword.value !== '') {
+				passwordMismatchMessage.style.display = 'inline';
+			} else {
+				passwordMismatchMessage.style.display = 'none';
+			}
+		});
+	});
+</script>

@@ -1,0 +1,686 @@
+﻿/* 主題顏色宣告 */
+:root {
+    --black: #000000;
+    --deepBlue: #14213d;
+    --blue: #416ac2;
+    --orange: #fca311;
+    --lightGray: #e5e5e5;
+    --white: #ffffff;
+    --brown: #AD7D52;
+    --heart: #B44163;
+    --lightBlue-bg: rgba(45, 68, 119, 0.486);
+}
+
+/* 頁面背景色 */
+body {
+    background-color: var(--deepBlue);
+    color: var(--white);
+}
+
+/* 導覽列 */
+/*.header {
+    background-color: rgba(45, 68, 119, 0.486);
+}
+
+.navbar {
+    margin-left: 10%;
+    margin-right: 10%;
+    color: var(--white);
+    font-size: 1.75rem;
+    font-weight: bolder;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}*/
+
+.mycontainer {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+
+/* 麵包屑 */
+#linkWordDiv {
+    margin-top: 1%;
+}
+
+    #linkWordDiv h1 {
+        font-size: 1.25rem;
+        font-weight: 500;
+        text-align: left;
+    }
+
+.reg-and-like-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 12%;
+    margin-bottom: 2%;
+}
+/* 報名按鈕 */
+.register-btn {
+    height:3rem;
+    width: fit-content;
+    background-color: var(--deepBlue);
+    border: var(--orange) 2px solid;
+    padding: 2.5px 12.5px;
+    border-radius: 5px;
+    transition: all 0.1s ease;
+}
+
+    .register-btn:hover {
+        background-color: var(--brown);
+        border: var(--orange) 2px solid;
+    }
+
+.alreadyRegister-btn {
+    height:3rem;
+    width: fit-content;
+    background-color: var(--black);
+    border: var(--orange) 2px solid;
+    padding: 2.5px 12.5px;
+    border-radius: 5px;
+    transition: all 0.1s ease;
+}
+ .alreadyRegister-btn:hover + .hit-style {
+    display: block;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    70% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/* 文字設計 */
+.register-btn-text-style {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-decoration: none;
+    color: var(--orange);
+    transition: color 0.1s;
+}
+
+    .register-btn-text-style:hover {
+        color: var(--white);
+    }
+
+.alreadyRegister-btn-text-style {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-decoration: none;
+    color: var(--lightGray);
+    transition: color 0.1s;
+}
+
+/* 點擊愛心 */
+.heart-inner .heart-icon {
+    cursor: pointer;
+}
+
+.heart-inner {
+    margin-top: 1rem;
+    height: 2rem;
+    margin-bottom: 1.5rem;
+    margin-left:75%;
+    display:flex;
+}
+
+.heart-inner i{
+    transform: scale(1.1);
+}
+
+.hit-style {
+    display: none;
+    margin-top: 15px;
+    padding-left: 5.3px;
+    font-size: 1rem;
+    position: absolute;
+    animation: bounceIn 0.4s ease forwards;
+    z-index:2;
+}
+
+.heart-inner .heart-icon:hover + .hit-style {
+    display: block;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    70% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* 輪播圖 */
+.carouselDiv {
+    display: flex;
+    justify-content: center;
+}
+
+/* 圖片 */
+#pictureDiv {
+    box-shadow: 0 10px 50px 0 rgba(129, 128, 128, 0.66), inset 0 0 0 50px #333, inset 0 0 0 6px rgba(255, 255, 255, 0.5);
+    position: relative;
+}
+
+.carousel {
+    position: relative;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 35rem;
+    width: 50rem;
+}
+
+#carousel-thumbs {
+    background: rgba(255, 255, 255, .3);
+    bottom: 0;
+    left: 0;
+    padding: 0 50px;
+    right: 0;
+}
+
+    #carousel-thumbs img {
+        border: 10px solid transparent;
+        cursor: pointer;
+        /* 統一調整小圖 */
+        height: 8rem;
+        width: 12rem;
+    }
+
+        #carousel-thumbs img:hover {
+            transform: scale(1.05);
+        }
+
+    #carousel-thumbs .selected img {
+        border: 4px solid var(--deepBlue);
+    }
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+}
+
+@media all and (max-width: 767px) {
+    .carousel-container #carousel-thumbs img {
+        border-width: 3px;
+    }
+}
+
+@media all and (min-width: 576px) {
+    .carousel-container #carousel-thumbs {
+        position: absolute;
+    }
+}
+
+@media all and (max-width: 576px) {
+    .carousel-container #carousel-thumbs {
+        background: #ccccce;
+    }
+}
+
+/* 圖片手動修改 */
+
+
+
+/* 活動內容資訊 */
+
+.activity_about {
+    background-color: var(--lightBlue-bg);
+    border-radius: 10px;
+    padding: 2%;
+}
+
+    .activity_about h1,
+    .activity_info h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        padding-bottom: 2%;
+        color: var(--orange);
+    }
+
+
+    .activity_about h3,
+    .activity_about h4 {
+        font-size: 1.55rem;
+        /* 修改字體大小 */
+        font-weight: 800;
+        /* 修改字體粗細 */
+    }
+
+    .activity_about ul,
+    .activity_about p {
+        font-size: 1.5rem;
+        /* 修改字體大小 */
+        font-weight: 400;
+        /* 修改字體粗細 */
+    }
+
+.activity_info {
+    background-color: var(--lightBlue-bg);
+    border-radius: 10px;
+    padding: 2%;
+    width: auto;
+    height: fit-content;
+}
+
+    .activity_info td {
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding-bottom: 1%;
+    }
+
+
+
+/* 懸浮聊天室按鈕 */
+
+.label-container {
+    position: fixed;
+    bottom: 3rem;
+    right: 15rem;
+    display: table;
+    visibility: hidden;
+}
+
+.label-text {
+    color: #FFF;
+    background: rgba(51,51,51,0.5);
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.label-arrow {
+    display: table-cell;
+    vertical-align: middle;
+    color: #333;
+    opacity: 0.5;
+}
+
+.float {
+    position: fixed;
+    width: 4rem;
+    height: 4rem;
+    bottom: 3rem;
+    right: 10rem;
+    background-color: var(--orange);
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+}
+
+    .float:hover {
+        opacity: 0.8;
+    }
+
+    .float i {
+        margin-top: 1.65rem;
+        height: 80%;
+        width: 80%;
+        transform:scale(1.2);
+    }
+
+.my-float {
+    font-size: 24px;
+    margin-top: 18px;
+}
+
+a.float + div.label-container {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease;
+}
+
+a.float:hover + div.label-container {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 聊天室彈出 */
+
+
+
+#dialogDiv {
+    background-color: var(--black);
+    height: auto;
+    margin-top: 10rem;
+    padding: 5rem;
+}
+
+/* 聊天室 */
+
+
+
+#messageBoardTitle {
+    width: 100%;
+    height: 6rem;
+    border-bottom: 0.5rem solid var(--white);
+    padding: 1rem;
+    display: inline-flex;
+}
+
+#discussInput {
+    display: none
+}
+
+#discussBtn {
+    width: fit-content;
+    border: var(--orange) 2px solid;
+    padding: 2.5px 12.5px;
+    border-radius: 5px;
+    transition: all 0.1s ease;
+    margin-left: 70%;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-decoration: none;
+    color: var(--orange);
+    transition: color 0.1s;
+}
+
+    #discussBtn:hover {
+        background-color: var(--brown);
+        border: var(--orange) 2px solid;
+    }
+
+#discussBtn {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-decoration: none;
+    color: var(--orange);
+    transition: color 0.1s;
+}
+
+    #discussBtn:hover {
+        color: var(--white);
+    }
+
+.discuss-box {
+    height: auto;
+    width: 100%;
+    margin-bottom: 1rem;
+    /* background: gray; */
+    overflow-wrap: break-word;
+    /* padding: 1rem; */
+}
+
+    .discuss-box textarea {
+        width: 100%;
+    }
+
+
+/* 討論輸入按鈕 */
+
+.publishBtn {
+    height: 100%;
+    width: auto;
+    display: inline-flex;
+    background-color: var(--black);
+    border: var(--orange) 2px solid;
+    padding: 2.5px 12.5px;
+    border-radius: 5px;
+    transition: all 0.1s ease;
+    float: right;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-decoration: none;
+    color: var(--orange);
+    transition: color 0.1s;
+}
+
+    .publishBtn i {
+        color: var(--white);
+    }
+
+    .publishBtn:hover {
+        color: var(--white);
+    }
+
+    .publishBtn:hover {
+        background-color: var(--brown);
+        border: var(--orange) 2px solid;
+    }
+
+    .publishBtn p {
+        margin-right: 1rem;
+    }
+/* 討論區 */
+.commentDiv {
+    display: block;
+    height: auto;
+    margin-top: 2rem;
+    border: 1px solid var(--white);
+    background-color: var(--black);
+    padding: 2rem;
+}
+
+.userCommentDiv {
+    width: 100%;
+    height: auto;
+    /* margin-top: 1rem; */
+    display: inline-flex;
+    background-color: var(--black);
+}
+
+
+.profile {
+    background-image: center;
+    background-position: fixed;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin: 0 2% 3% 2%;
+    position: relative;
+}
+
+.comment-box {
+    height: auto;
+    width: 75%;
+    margin-bottom: 1rem;
+    /* background: gray; */
+    overflow-wrap: break-word;
+    /* padding: 1rem; */
+}
+
+.commentBtnDiv {
+    width: 100%;
+    height: 3rem;
+    /* background-color: #B44163; */
+}
+
+
+.userCommentDivRight {
+    width: 80%;
+}
+
+.replyBtn {
+    height: 100%;
+    width: auto;
+    display: inline-flex;
+    background-color: var(--black);
+    border: var(--orange) 2px solid;
+    padding: 2.5px 12.5px;
+    border-radius: 5px;
+    transition: all 0.1s ease;
+    float: right;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-decoration: none;
+    color: var(--orange);
+    transition: color 0.1s;
+}
+
+    .replyBtn i {
+        color: var(--white);
+    }
+
+    .replyBtn:hover {
+        color: var(--white);
+    }
+
+    .replyBtn:hover {
+        background-color: var(--brown);
+        border: var(--orange) 2px solid;
+    }
+
+    .replyBtn p {
+        margin-right: 1rem;
+    }
+
+.replyDiv {
+    width: 80%;
+    margin-left: 5%;
+    /* margin: 3% 0 0 0;  */
+    /* border-radius: 20px; */
+    /* display: inline-flex; */
+}
+
+.replyTextDiv {
+    margin-top: 1rem;
+    border-top: 0.5px solid var(--white);
+    padding-top: 1rem;
+    display: none;
+}
+
+    .replyTextDiv textarea {
+        width: 80%;
+        background-color: gray;
+    }
+
+.commentDatetime {
+    font-size:xx-small;
+}
+/* 留言按鈕 */
+.messageBtn {
+    width: fit-content;
+    background-color: var(--black);
+    border: var(--orange) 2px solid;
+    padding: 2.5px 12.5px;
+    border-radius: 5px;
+    transition: all 0.1s ease;
+    float: right;
+}
+
+    .messageBtn:hover {
+        background-color: var(--brown);
+        border: var(--orange) 2px solid;
+    }
+
+.messageBtn-text-style {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-decoration: none;
+    color: var(--orange);
+    transition: color 0.1s;
+}
+
+    .messageBtn-text-style:hover {
+        color: var(--white);
+    }
+
+
+.signBtn {
+    height: 100%;
+    width: auto;
+    display: inline-flex;
+    background-color: var(--black);
+    border: var(--orange) 2px solid;
+    padding: 2.5px 12.5px;
+    border-radius: 5px;
+    transition: all 0.1s ease;
+    float: right;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-decoration: none;
+    color: var(--orange);
+    transition: color 0.1s;
+}
+
+    .signBtn i {
+        color: var(--white);
+    }
+
+    .signBtn:hover {
+        color: var(--white);
+    }
+
+    .signBtn:hover {
+        background-color: var(--brown);
+        border: var(--orange) 2px solid;
+    }
+
+    .signBtn p {
+        margin-right: 1rem;
+    }
+  /*會員刪除編輯權限*/
+#editA, #deleteA {
+    font-size: xx-small;
+    color: orange;
+}
+
+    #editA:hover, #deleteA:hover {
+        color: lightgray
+    }
+
+    #heartSignBtn {
+        height: 3rem;
+        width: 14rem;
+        display: inline-flex;
+        background-color: var(--lightBlue-bg);
+        border: var(--orange) 2px solid;
+        padding: 2.5px 12.5px;
+        border-radius: 5px;
+        transition: all 0.1s ease;
+        float: right;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        text-decoration: none;
+        color: var(--orange);
+        transition: color 0.1s;
+    }
+
+    #heartSignBtn i {
+        color: var(--white);
+    }
+
+    #heartSignBtn:hover {
+        color: var(--white);
+    }
+
+    #heartSignBtn:hover {
+        background-color: var(--brown);
+        border: var(--orange) 2px solid;
+    }
+
+    #heartSignBtn p {
+        margin-right: 1rem;
+    }
+
+#organizerNickname {
+    color: var(--deepBlue);
+}
+
+#organizerIntro {
+    color: var(--deepBlue);
+}
